@@ -39,7 +39,21 @@ while (!pq.isEmpty()) {
 
 ---
 
-## Key Rules
+## Floyd-Warshall (All-Pairs Shortest Path)
+
+When you need shortest path between ALL pairs of nodes — run Floyd-Warshall instead of Dijkstra n times.
+
+```java
+// init: dist[i][i]=0, dist[i][j]=edge weight or ∞
+for (int k = 0; k < n; k++)          // intermediate node
+    for (int i = 0; i < n; i++)       // start
+        for (int j = 0; j < n; j++)   // end
+            dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
+```
+
+Use `Integer.MAX_VALUE / 2` (not MAX_VALUE) to avoid overflow when adding.
+
+---
 
 ```
 Non-negative weights only          → Dijkstra breaks with negative weights
@@ -59,7 +73,7 @@ Early exit when destination polled → first poll = minimum cost guaranteed
 | LC 743  | Network Delay Time                | Classic Dijkstra, answer = max(dist[])       | Medium     |
 | LC 1631 | Path With Minimum Effort          | Minimize max weight, not sum                 | Medium     |
 | LC 787  | Cheapest Flights Within K Stops   | Bellman-Ford, K+1 iterations, snapshot trick | Medium     |
-| LC 1334 | Find City With Smallest Neighbors | Run Dijkstra from every node                 | Medium     |
+| LC 1334 | Find City With Smallest Neighbors | Floyd-Warshall, all-pairs shortest path      | Medium     |
 | LC 2812 | Safest Path in Grid               | Multi-source BFS + Dijkstra                  | Medium     |
 
 ---
