@@ -111,12 +111,8 @@ class LC787_CheapestFlightsWithinKStops {
             for (int[] nb : graph.get(node)) {
                 int next = nb[0], price = nb[1];
                 int newCost = cost + price;
-
-                // only push if cheaper path found
-                if (newCost < dist[next]) {
-                    dist[next] = newCost;
-                    pq.offer(new int[]{newCost, next, stops + 1});
-                }
+                // push ALL valid paths — don't block by dist check
+                pq.offer(new int[]{newCost, next, stops + 1});
             }
         }
 
