@@ -54,22 +54,22 @@ Early exit when destination polled → first poll = minimum cost guaranteed
 
 ## Problems
 
-| # | Problem | Key Twist | Difficulty |
-|---|---------|-----------|------------|
-| LC 743 | Network Delay Time | Classic Dijkstra, answer = max(dist[]) | Medium |
-| LC 1631 | Path With Minimum Effort | Minimize max weight, not sum | Medium |
-| LC 787 | Cheapest Flights Within K Stops | Dijkstra with stop constraint | Medium |
-| LC 1334 | Find City With Smallest Neighbors | Run Dijkstra from every node | Medium |
-| LC 2812 | Safest Path in Grid | Multi-source BFS + Dijkstra | Medium |
+| #       | Problem                           | Key Twist                                    | Difficulty |
+| ------- | --------------------------------- | -------------------------------------------- | ---------- |
+| LC 743  | Network Delay Time                | Classic Dijkstra, answer = max(dist[])       | Medium     |
+| LC 1631 | Path With Minimum Effort          | Minimize max weight, not sum                 | Medium     |
+| LC 787  | Cheapest Flights Within K Stops   | Bellman-Ford, K+1 iterations, snapshot trick | Medium     |
+| LC 1334 | Find City With Smallest Neighbors | Run Dijkstra from every node                 | Medium     |
+| LC 2812 | Safest Path in Grid               | Multi-source BFS + Dijkstra                  | Medium     |
 
 ---
 
 ## BFS vs Dijkstra
 
-| | BFS | Dijkstra |
-|---|---|---|
-| Edge weights | All equal (1) | Different weights |
-| Data structure | Queue (FIFO) | Priority Queue (min heap) |
-| Order processed | Layer by layer | Cheapest node first |
-| Time complexity | O(V + E) | O((V + E) log V) |
-| Use for | Unweighted shortest path | Weighted shortest path |
+|                 | BFS                      | Dijkstra                  |
+| --------------- | ------------------------ | ------------------------- |
+| Edge weights    | All equal (1)            | Different weights         |
+| Data structure  | Queue (FIFO)             | Priority Queue (min heap) |
+| Order processed | Layer by layer           | Cheapest node first       |
+| Time complexity | O(V + E)                 | O((V + E) log V)          |
+| Use for         | Unweighted shortest path | Weighted shortest path    |
