@@ -73,9 +73,10 @@ num%2 trick → converts "count odds" to "subarray sum = k"
 
 ## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|---------|------------|
-| LC 303 | Range Sum Query Immutable | Basic prefix sum | Easy |
-| LC 724 | Find Pivot Index | totalSum - leftSum - nums[i] | Easy |
-| LC 560 | Subarray Sum Equals K | Prefix sum + HashMap | Medium |
-| LC 1248 | Count Number of Nice Subarrays | num%2 + LC560 pattern | Medium |
+| #       | Problem                        | Pattern                      | Difficulty |
+| ------- | ------------------------------ | ---------------------------- | ---------- |
+| LC 303  | Range Sum Query Immutable      | Basic prefix sum             | Easy       |
+| LC 724  | Find Pivot Index               | totalSum - leftSum - nums[i] | Easy       |
+| LC 560  | Subarray Sum Equals K          | Prefix sum + HashMap         | Medium     |
+| LC 930  | Binary Subarrays With Sum      | Identical to LC 560          | Medium     |
+| LC 1248 | Count Number of Nice Subarrays | num%2 + LC560 pattern        | Medium     |
