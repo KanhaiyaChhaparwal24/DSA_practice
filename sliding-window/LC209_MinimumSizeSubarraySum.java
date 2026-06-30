@@ -7,7 +7,7 @@
 //   minimum length subarray whose sum >= target.
 //   Return 0 if no such subarray exists.
 //
-// APPROACH: Sliding Window (Two Pointers)
+// APPROACH: Variable Size Sliding Window (Two Pointers)
 //   1. Expand right pointer — add nums[r] to sum
 //   2. While sum >= target:
 //      - record current window length (r - l + 1)
